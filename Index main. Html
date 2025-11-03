@@ -1,1 +1,257 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVN | A Force for Good</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: slideDown 1s ease;
+    }
+
+    /* ---------- Animated Logo ---------- */
+    .logo-container {
+      font-family: 'Poppins', sans-serif;
+      font-size: 45px;
+      font-weight: 700;
+      display: flex;
+    }
+
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInAndColorCycle 4s infinite;
+    }
+
+    .letter:nth-child(1) { animation-delay: 0s; }
+    .letter:nth-child(2) { animation-delay: 0.2s; }
+    .letter:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes fadeInAndColorCycle {
+      0% { opacity: 0; transform: translateY(30px); color: #E53935; }
+      20% { opacity: 1; transform: translateY(0); }
+      25% { color: #43A047; }
+      50% { color: #1E88E5; }
+      75% { color: #FDD835; }
+      100% { color: #E53935; }
+    }
+
+    /* Smaller footer logo */
+    .logo-container.small { font-size: 30px; }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #00e0ff;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #00e0ff; }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #00e0ff;
+      text-shadow: 0 0 10px #00e0ff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+      opacity: 0.9;
+      color: #eee;
+    }
+
+    /* ---------- Button ---------- */
+    .glow-btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: #00e0ff;
+      color: #111;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 0 15px #00e0ff;
+    }
+
+    .glow-btn:hover {
+      transform: scale(1.05);
+      background: #fff;
+      color: #00e0ff;
+      box-shadow: 0 0 25px #00e0ff;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      animation: fadeUp 1.5s ease;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    .fade-in { animation: fadeIn 1.5s ease forwards; }
+    .slide-up { animation: fadeUp 2s ease forwards; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ---------- Header ---------- -->
+  <header>
+    <div class="logo">
+      <div class="logo-container">
+        <span class="letter">A</span>
+        <span class="letter">V</span>
+        <span class="letter">N</span>
+      </div>
+    </div>
+    <nav>
+      <a href="http://artificialvirusenetwork6248t6.blogspot.com/" target="_blank">Blogs</a>
+      <a href="https://avn-myweb-network.my.canva.site/download" target="_blank">Download</a>
+      <a href="https://shorten.ly/AVN" target="_blank">Join</a>
+      <a href="https://avn-myweb-network.my.canva.site/pikhlebooks" target="_blank">Library</a>
+    </nav>
+  </header>
+
+  <!-- ---------- Hero Section ---------- -->
+  <section class="hero">
+    <div class="content">
+      <h1 class="fade-in">AVN Founder: <span>Viraj Atkari</span></h1>
+      <p class="slide-up">
+        Artificial Viruse Network (AVN) is an organization built for a <b>force of good</b> —
+        creating better futures through <b>innovation, knowledge, and technology.</b>
+      </p>
+      <button class="glow-btn" onclick="joinNow()">Join the Force</button>
+    </div>
+  </section>
+
+  <!-- ---------- Footer ---------- -->
+  <footer>
+    <div class="logo-container small">
+      <span class="letter">A</span>
+      <span class="letter">V</span>
+      <span class="letter">N</span>
+    </div>
+    <p>A Force for Good</p>
+  </footer>
+
+  <script>
+    // Fade-in effect
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        document.body.style.transition = "opacity 1.5s";
+        document.body.style.opacity = "1";
+      }, 100);
+    });
+
+    // Join Button Action
+    function joinNow() {
+      window.open("https://shorten.ly/AVN", "_blank");
+    }
+  </script>
+</body>
+</html>
